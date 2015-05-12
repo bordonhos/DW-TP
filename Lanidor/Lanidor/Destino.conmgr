@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Destino"
+  DTS:DTSID="{C66DBA31-4DFC-4E22-9C80-DE2877055C82}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=deti-sql-aulas.ua.pt;User ID=ed77233;Initial Catalog=ed77233;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIh/9+p9KF0WtvVUKN0w3TgAAAAACAAAAAAAQZgAAAAEAACAAAAB3nnP5AuhgDSKuKyLDFAL6PyD8d0MPG0hjHmUkM908rQAAAAAOgAAAAAIAACAAAADrnVwcYfcoCTtzSWbH0SozURvseW0mlqixBFeLmwGOK4AAAAAwEyE4GkrT0bbRXmeqvMx8lC6f5CaTj1FOahGb2N8QQco0Lh/ymwHr8drzKQthcW0m6mDE0lHNxq4zqqk9xCaxJXh1msG4sNDOBZhlVO22qLrl7stSV2+DhW/lKgCTKnLUcRK+ndC2YHC2vc5xkRTd6OiwY/58gCZFFmPbDdkI9kAAAAA6FDm3kpTrrydd2NaIVAZCO2tTwJYwUZV2rjj3D6c17KfhcBfqxjVEyF2f/rX/id4J//P3tTz7COayH7mQxwVF</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
