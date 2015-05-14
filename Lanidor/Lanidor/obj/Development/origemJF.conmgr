@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="origemJF"
+  DTS:DTSID="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=deti-sql-aulas.ua.pt;User ID=ed77233;Initial Catalog=ResumoECommerce;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUSH82BsqVECM7m6rCTYGFwAAAAACAAAAAAAQZgAAAAEAACAAAAA8g7H3Y/8XdJxs+or+DmP1VOnc5F3jEAHS1KotnvNY9QAAAAAOgAAAAAIAACAAAAAEzsb6wTDP1jy17KDFVU9BJwprBkiHCwxAPrtxBk5lOoAAAACHoMH8+RIcvCYfDQFctCINfrmu5/r9Vj8aG0y6YAKXn+Ds5N4hMRnCtmzCycuN9r1J6DIBWLIIZJOg0xpcYS5mGxkLobtxu2tRklkxMzWPpdfYztKxR7ZlrWgoQcTSMg0tpw48wWpkhLCz8/yldI7uebp4CwCzBzvQnyDaZ+ugukAAAAAXyc+gVFtTITZT7MQmPRnyqNqWQhHhNTm16csi1FsVNE5ERgBGELb11gM/hCY7Pqrm6OlV91T2tmbFVAoag2HT</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
