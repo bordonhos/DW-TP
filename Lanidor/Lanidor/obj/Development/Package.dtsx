@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{FEB25148-7500-4ADB-96D3-9B01F98E859D}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{74E5FE7B-DC5F-4A5B-B877-CC4D02C9FC14}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -189,26 +189,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DETI-SQL-AULAS.ua.pt.ed77233.ed77233]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{77B85F5A-8585-459E-B132-F361731BD2EE}"
-      DTS:ObjectName="DETI-SQL-AULAS.ua.pt.ed77233.ed77233">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DETI-SQL-AULAS.ua.pt;User ID=ed77233;Initial Catalog=ed77233;Provider=SQLNCLI11.1;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[deti-sql-aulas.ua.pt.ResumoECommerce.ed77233]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{77926187-2800-4E5D-8CAE-956F36ADDC7E}"
-      DTS:ObjectName="deti-sql-aulas.ua.pt.ResumoECommerce.ed77233">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=deti-sql-aulas.ua.pt;User ID=ed77233;Initial Catalog=ResumoECommerce;Provider=SQLNCLI11.1;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
       DTS:Description="Distritos"
@@ -323,8 +303,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Clientes_destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DETI-SQL-AULAS.ua.pt.ed77233.ed77233]"
-                  connectionManagerRefId="Package.ConnectionManagers[DETI-SQL-AULAS.ua.pt.ed77233.ed77233]"
+                  connectionManagerID="{77B85F5A-8585-459E-B132-F361731BD2EE}:invalid"
+                  connectionManagerRefId="{77B85F5A-8585-459E-B132-F361731BD2EE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -461,8 +441,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Clientes_source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[deti-sql-aulas.ua.pt.ResumoECommerce.ed77233]"
-                  connectionManagerRefId="Package.ConnectionManagers[deti-sql-aulas.ua.pt.ResumoECommerce.ed77233]"
+                  connectionManagerID="{77926187-2800-4E5D-8CAE-956F36ADDC7E}:invalid"
+                  connectionManagerRefId="{77926187-2800-4E5D-8CAE-956F36ADDC7E}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -691,8 +671,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DETI-SQL-AULAS.ua.pt.ed77233.ed77233]"
-                  connectionManagerRefId="Package.ConnectionManagers[DETI-SQL-AULAS.ua.pt.ed77233.ed77233]"
+                  connectionManagerID="{77B85F5A-8585-459E-B132-F361731BD2EE}:invalid"
+                  connectionManagerRefId="{77B85F5A-8585-459E-B132-F361731BD2EE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -938,7 +918,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -950,7 +930,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -959,8 +939,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{3B9C2849-01DE-48C7-BA70-B6382A115E0E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DestinoJF]"
+                  connectionManagerID="{C66DBA31-4DFC-4E22-9C80-DE2877055C82}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1056,7 +1036,7 @@
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marca]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="50"
                       name="Marca" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Classificacao]"
@@ -1147,8 +1127,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[origemJF]"
+                  connectionManagerID="{7D9E6259-52A6-4B51-A18B-6FEFCA336BF2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Origem]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1706,8 +1686,8 @@
               <connections>
                 <connection
                   refId="Package\DIM_Clientes\Clientes.Connections[OleDbConnection]"
-                  connectionManagerID="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[origemJF]"
+                  connectionManagerID="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}:invalid"
+                  connectionManagerRefId="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3885,8 +3865,8 @@
               <connections>
                 <connection
                   refId="Package\DIM_Tempo\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{3B9C2849-01DE-48C7-BA70-B6382A115E0E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DestinoJF]"
+                  connectionManagerID="{C66DBA31-4DFC-4E22-9C80-DE2877055C82}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4016,7 +3996,7 @@ FROM Vendas</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -4025,8 +4005,8 @@ FROM Vendas</property>
               <connections>
                 <connection
                   refId="Package\DIM_Tempo\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{3BBE217B-3637-4CA5-BA7B-9FC38DE87A3F}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[origemJF]"
+                  connectionManagerID="{7D9E6259-52A6-4B51-A18B-6FEFCA336BF2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Origem]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4045,38 +4025,186 @@ FROM Vendas</property>
                       name="DataHoraReg"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroSemana]"
-                      dataType="i4"
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      dataType="guid"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumeroSemana]"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroSemana]"
-                      name="NumeroSemana"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      name="idcliente"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DiaSemana]"
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idProduto]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DiaSemana]"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DiaSemana]"
-                      name="DiaSemana"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idProduto]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idProduto]"
+                      name="idProduto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idProdutoTamanhoCor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idProdutoTamanhoCor]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[idProdutoTamanhoCor]"
+                      name="idProdutoTamanhoCor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Referencia]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Referencia]"
+                      length="10"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Referencia]"
+                      name="Referencia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroCor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumeroCor]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroCor]"
+                      name="NumeroCor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tamanho]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tamanho]"
+                      length="3"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tamanho]"
+                      name="Tamanho"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[PVP]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PVP]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[PVP]"
+                      name="PVP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Desconto]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Desconto]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Desconto]"
+                      name="Desconto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Classificacao]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Classificacao]"
+                      length="50"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Classificacao]"
+                      name="Classificacao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Conceito]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Conceito]"
+                      length="50"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Conceito]"
+                      name="Conceito"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[paisProducao]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[paisProducao]"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[paisProducao]"
+                      name="paisProducao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Estacao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Estacao]"
+                      length="7"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Estacao]"
+                      name="Estacao"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DataHoraReg]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="DataHoraReg" />
                     <externalMetadataColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumeroSemana]"
-                      dataType="i4"
-                      name="NumeroSemana" />
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      dataType="guid"
+                      name="idcliente" />
                     <externalMetadataColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DiaSemana]"
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idProduto]"
                       dataType="i4"
-                      name="DiaSemana" />
+                      name="idProduto" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[idProdutoTamanhoCor]"
+                      dataType="i4"
+                      name="idProdutoTamanhoCor" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Referencia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Referencia" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumeroCor]"
+                      dataType="i4"
+                      name="NumeroCor" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tamanho]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Tamanho" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PVP]"
+                      dataType="cy"
+                      name="PVP" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Desconto]"
+                      dataType="cy"
+                      name="Desconto" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Classificacao]"
+                      dataType="wstr"
+                      length="50"
+                      name="Classificacao" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Conceito]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Conceito" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[paisProducao]"
+                      dataType="i4"
+                      name="paisProducao" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Estacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Estacao" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4085,21 +4213,80 @@ FROM Vendas</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      dataType="guid"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
                       refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumeroSemana]"
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idProduto]"
                       dataType="i4"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumeroSemana]"
-                      name="NumeroSemana" />
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idProduto]"
+                      name="idProduto" />
                     <outputColumn
-                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DiaSemana]"
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idProdutoTamanhoCor]"
                       dataType="i4"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DiaSemana]"
-                      name="DiaSemana" />
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[idProdutoTamanhoCor]"
+                      name="idProdutoTamanhoCor" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Referencia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Referencia]"
+                      name="Referencia" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumeroCor]"
+                      dataType="i4"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumeroCor]"
+                      name="NumeroCor" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tamanho]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tamanho]"
+                      name="Tamanho" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PVP]"
+                      dataType="cy"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PVP]"
+                      name="PVP" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Desconto]"
+                      dataType="cy"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Desconto]"
+                      name="Desconto" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Classificacao]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Classificacao]"
+                      name="Classificacao" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Conceito]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Conceito]"
+                      name="Conceito" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[paisProducao]"
+                      dataType="i4"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[paisProducao]"
+                      name="paisProducao" />
+                    <outputColumn
+                      refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Estacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Estacao]"
+                      name="Estacao" />
                     <outputColumn
                       refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
@@ -4108,7 +4295,7 @@ FROM Vendas</property>
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DataHoraReg]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DataHoraReg]"
                       name="DataHoraReg" />
                   </outputColumns>
@@ -4159,7 +4346,7 @@ FROM Vendas</property>
                       refId="Package\DIM_Tempo\Sort.Inputs[Sort Input].Columns[NumeroSemana]"
                       cachedDataType="i4"
                       cachedName="NumeroSemana"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroSemana]">
+                      lineageId="Package\DIM_Tempo\304:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4175,7 +4362,7 @@ FROM Vendas</property>
                       refId="Package\DIM_Tempo\Sort.Inputs[Sort Input].Columns[DiaSemana]"
                       cachedDataType="i4"
                       cachedName="DiaSemana"
-                      lineageId="Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DiaSemana]">
+                      lineageId="Package\DIM_Tempo\305:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4222,7 +4409,7 @@ FROM Vendas</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroSemana]}</property>
+                          name="SortColumnId">#{Package\DIM_Tempo\304:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4236,7 +4423,7 @@ FROM Vendas</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DIM_Tempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DiaSemana]}</property>
+                          name="SortColumnId">#{Package\DIM_Tempo\305:invalid}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5066,7 +5253,7 @@ FROM Vendas</property>
     design-time-name="Package\DIM_Tempo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="100,42"
           Id="Package\DIM_Tempo\Sort"
@@ -5114,7 +5301,9 @@ FROM Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,28.5,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

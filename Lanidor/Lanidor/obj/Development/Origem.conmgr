@@ -8,7 +8,7 @@
       DTS:ConnectionString="Data Source=deti-sql-aulas.ua.pt;User ID=ed77233;Initial Catalog=ResumoECommerce;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUSH82BsqVECM7m6rCTYGFwAAAAACAAAAAAAQZgAAAAEAACAAAADdd32TUMCBitsXTmVdOBore3/vQPPsmgkdCcBXkoHL6wAAAAAOgAAAAAIAACAAAAAlPHG2PEanyDLm/WA9dAgu+0ChXP+xrRgamLwUbOv2k4AAAADoKST29DCOIereT4p0NWkhqXyALfpltWKFzOwqC9+kN99q5vYgV2yShoqSd31bVcxMYCbOqveA6dslLvGEeIvn0sgO5iONtRRlK0dT03wtfSbQBv0uleyx/jgZnBLiODebR/8hALZK613Rvt5zYjOZfJA7rgiM3l9jIZcNksUIfEAAAAB1b2t54mlAs9owYc8NGsfpUo6Stihd2LSdmwmm76zL88y8Rkr8b3ZNJXtEhr6+gtQzPJjJldIdccsb34c6BqB/</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUSH82BsqVECM7m6rCTYGFwAAAAACAAAAAAAQZgAAAAEAACAAAAAk7cg5efFvp0zIRzEHrkaFc+5gQR7KTMtZhTOKvJRUJAAAAAAOgAAAAAIAACAAAADCIkwvNgHs5qMT+u4a1l1Q/Z4eenaxoO9qNLW9IebtL4AAAABzEpPTxrjoY8mvUZFHXxHMQq9jdKH+IS2LtOAgwR0AnvPnEx2CYMYsqDUsADtTZX+t3ayBecUTJUuRViay86FtOU4/EnS/lAe7LGK8U91vFUBwxpFzP3w8s4NdNn7CrvDsjRAMFIHa1r08KyReNuZq4ez6ML1cTLRpHuMF2PIzfkAAAACpZrmS45yk1rriVRJ0nYhUqqibY3n1J9niLezTzUkJRPfWBdDXk/FmIoBF1uW0q4nZXijyB7VeRwhu3SvTjXcH</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
