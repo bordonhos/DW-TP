@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{FB0FCFDB-EFB4-4207-A837-44766172B2B8}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{92DBE227-F84E-4CE3-9E51-E5586CE939D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -812,7 +812,7 @@
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CodigoPostal"
-                      lineageId="Package\DIM_Clientes\375:invalid" />
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -839,7 +839,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[SUBSTRING](#{Package\DIM_Clientes\375:invalid},1,4)</property>
+                          name="Expression">[SUBSTRING](#{Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]},1,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1180,6 +1180,22 @@
                       cachedName="idTipoProfissao"
                       cachedSortKeyPosition="1"
                       lineageId="Package\DIM_Clientes\Clientes.Outputs[OLE DB Source Output].Columns[idTipoProfissao]" />
+                    <inputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[idCliente]"
+                      cachedDataType="guid"
+                      cachedName="idCliente"
+                      lineageId="Package\DIM_Clientes\Clientes.Outputs[OLE DB Source Output].Columns[idCliente]" />
+                    <inputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[DataNasc]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DataNasc"
+                      lineageId="Package\DIM_Clientes\Clientes.Outputs[OLE DB Source Output].Columns[DataNasc]" />
+                    <inputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoPostal]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoPostal"
+                      lineageId="Package\DIM_Clientes\Clientes.Outputs[OLE DB Source Output].Columns[CodigoPostal]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1221,6 +1237,46 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DIM_Clientes\Merge Join.Inputs[Merge Join Right Input].Columns[Designacao]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[idCliente]"
+                      dataType="guid"
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[idCliente]"
+                      name="idCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[idCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[DataNasc]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[DataNasc]"
+                      name="DataNasc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[DataNasc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]"
+                      name="CodigoPostal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DIM_Clientes\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoPostal]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1685,7 +1741,7 @@
                       refId="Package\DIM_Clientes\Sort.Inputs[Sort Input].Columns[idCliente]"
                       cachedDataType="guid"
                       cachedName="idCliente"
-                      lineageId="Package\DIM_Clientes\376:invalid">
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[idCliente]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1701,7 +1757,7 @@
                       refId="Package\DIM_Clientes\Sort.Inputs[Sort Input].Columns[DataNasc]"
                       cachedDataType="dbTimeStamp"
                       cachedName="DataNasc"
-                      lineageId="Package\DIM_Clientes\377:invalid">
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[DataNasc]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1718,7 +1774,7 @@
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CodigoPostal"
-                      lineageId="Package\DIM_Clientes\375:invalid">
+                      lineageId="Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1785,7 +1841,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DIM_Clientes\376:invalid}</property>
+                          name="SortColumnId">#{Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[idCliente]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1799,7 +1855,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DIM_Clientes\377:invalid}</property>
+                          name="SortColumnId">#{Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[DataNasc]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1813,7 +1869,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DIM_Clientes\375:invalid}</property>
+                          name="SortColumnId">#{Package\DIM_Clientes\Merge Join.Outputs[Merge Join Output].Columns[CodigoPostal]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5109,89 +5165,6 @@ FROM ResumoECommerce..Vendas</property>
           version="1">
           <components>
             <component
-              refId="Package\FACT_Vendas\Clientes"
-              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Clientes"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\FACT_Vendas\Clientes.Connections[OleDbConnection]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </output>
-                <output
-                  refId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\FACT_Vendas\Clientes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\FACT_Vendas\Derived Column"
               componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -5478,127 +5451,6 @@ FROM ResumoECommerce..Vendas</property>
                       refId="Package\FACT_Vendas\DIM_Tempo.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\FACT_Vendas\DIM_Tempo.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\FACT_Vendas\Lookup"
-              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml"></property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\FACT_Vendas\Lookup.Connections[OleDbConnection]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\FACT_Vendas\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\FACT_Vendas\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\FACT_Vendas\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\FACT_Vendas\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\FACT_Vendas\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\FACT_Vendas\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\FACT_Vendas\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\FACT_Vendas\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\FACT_Vendas\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\FACT_Vendas\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\FACT_Vendas\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6888,17 +6740,17 @@ FROM ResumoECommerce..Vendas</property>
           Id="Package\DIM_Clientes"
           TopLeft="67,128" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\DIM_Tempo"
-          TopLeft="70,48" />
-        <NodeLayout
           Size="148,42"
           Id="Package\DIM_Produtos"
           TopLeft="295,84" />
         <NodeLayout
+          Size="139,42"
+          Id="Package\DIM_Tempo"
+          TopLeft="70,48" />
+        <NodeLayout
           Size="146,42"
           Id="Package\FACT_Vendas"
-          TopLeft="316,214" />
+          TopLeft="293,192" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -6906,7 +6758,7 @@ FROM ResumoECommerce..Vendas</property>
     design-time-name="Package\DIM_Clientes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="100,42"
           Id="Package\DIM_Clientes\Sort"
@@ -6950,7 +6802,7 @@ FROM ResumoECommerce..Vendas</property>
         <NodeLayout
           Size="118,42"
           Id="Package\DIM_Clientes\Clientes"
-          TopLeft="32,42" />
+          TopLeft="32,41" />
         <NodeLayout
           Size="103,42"
           Id="Package\DIM_Clientes\Final"
@@ -7025,7 +6877,7 @@ FROM ResumoECommerce..Vendas</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DIM_Clientes.Paths[OLE DB Source Output1]"
-          TopLeft="150,66.4166666666667">
+          TopLeft="150,65.9166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7178,9 +7030,7 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-34.75,52.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7276,9 +7126,7 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="13,-22,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7357,94 +7205,6 @@ FROM ResumoECommerce..Vendas</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DIM_Tempo">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138,42"
-          Id="Package\DIM_Tempo\Dim_Tempo"
-          TopLeft="402,107" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\DIM_Tempo\Vendas"
-          TopLeft="185,222" />
-        <NodeLayout
-          Size="100,42"
-          Id="Package\DIM_Tempo\Sort"
-          TopLeft="454,272" />
-        <EdgeLayout
-          Id="Package\DIM_Tempo.Paths[OLE DB Source Output]"
-          TopLeft="300,243">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154,50"
-              Start="0,0"
-              End="146.5,50">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73,0"
-                    Point2="77,0"
-                    Point3="77,4" />
-                  <mssgle:LineSegment
-                    End="77,46" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77,46"
-                    Point2="77,50"
-                    Point3="81,50" />
-                  <mssgle:LineSegment
-                    End="146.5,50" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DIM_Tempo.Paths[Sort Output]"
-          TopLeft="504,272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-33,-123"
-              Start="0,0"
-              End="-33,-115.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-57.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-57.5"
-                    Point2="0,-61.5"
-                    Point3="-4,-61.5" />
-                  <mssgle:LineSegment
-                    End="-29,-61.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29,-61.5"
-                    Point2="-33,-61.5"
-                    Point3="-33,-65.5" />
-                  <mssgle:LineSegment
-                    End="-33,-115.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <TaskHost
     design-time-name="Package\DIM_Produtos">
     <LayoutInfo>
@@ -7880,6 +7640,102 @@ FROM ResumoECommerce..Vendas</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DIM_Tempo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="115,42"
+          Id="Package\DIM_Tempo\Vendas"
+          TopLeft="185,222" />
+        <NodeLayout
+          Size="100,42"
+          Id="Package\DIM_Tempo\Sort"
+          TopLeft="454,272" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\DIM_Tempo\Dim_Tempo"
+          TopLeft="402,107" />
+        <EdgeLayout
+          Id="Package\DIM_Tempo.Paths[OLE DB Source Output]"
+          TopLeft="300,243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="154,50"
+              Start="0,0"
+              End="146.5,50">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73,0"
+                    Point2="77,0"
+                    Point3="77,4" />
+                  <mssgle:LineSegment
+                    End="77,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,46"
+                    Point2="77,50"
+                    Point3="81,50" />
+                  <mssgle:LineSegment
+                    End="146.5,50" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_Tempo.Paths[Sort Output]"
+          TopLeft="504,272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33,-123"
+              Start="0,0"
+              End="-33,-115.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-57.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-57.5"
+                    Point2="0,-61.5"
+                    Point3="-4,-61.5" />
+                  <mssgle:LineSegment
+                    End="-29,-61.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29,-61.5"
+                    Point2="-33,-61.5"
+                    Point3="-33,-65.5" />
+                  <mssgle:LineSegment
+                    End="-33,-115.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_Tempo\Vendas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_Tempo\Dim_Tempo">
     <Properties>
@@ -7893,14 +7749,6 @@ FROM ResumoECommerce..Vendas</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DIM_Tempo\Vendas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\FACT_Vendas">
     <LayoutInfo>
@@ -7911,111 +7759,59 @@ FROM ResumoECommerce..Vendas</property>
           Id="Package\FACT_Vendas\DIM_Tempo"
           TopLeft="30,40" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\FACT_Vendas\Clientes"
-          TopLeft="920,106" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\FACT_Vendas\Vendas"
-          TopLeft="30,267" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\FACT_Vendas\Lookup"
-          TopLeft="597,311" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\FACT_Vendas\Derived Column"
-          TopLeft="195,223" />
-        <EdgeLayout
-          Id="Package\FACT_Vendas.Paths[OLE DB Source Output]"
-          TopLeft="145,288">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,-44"
-              Start="0,0"
-              End="42.5,-44">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="21,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21,0"
-                    Point2="25,0"
-                    Point3="25,-4" />
-                  <mssgle:LineSegment
-                    End="25,-40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25,-40"
-                    Point2="25,-44"
-                    Point3="29,-44" />
-                  <mssgle:LineSegment
-                    End="42.5,-44" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="132,42"
+          Id="Package\FACT_Vendas\Merge Join"
+          TopLeft="368,121" />
         <NodeLayout
           Size="100,42"
           Id="Package\FACT_Vendas\Sort"
           TopLeft="216,157" />
         <NodeLayout
+          Size="115,42"
+          Id="Package\FACT_Vendas\Vendas"
+          TopLeft="30,267" />
+        <NodeLayout
           Size="109,42"
           Id="Package\FACT_Vendas\Sort 1"
           TopLeft="222,42" />
-        <EdgeLayout
-          Id="Package\FACT_Vendas.Paths[OLE DB Source Output1]"
-          TopLeft="169,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53,0"
-              Start="0,0"
-              End="45.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="45.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_Vendas.Paths[Derived Column Output]"
-          TopLeft="269.5,223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-24"
-              Start="0,0"
-              End="0,-16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="132,42"
-          Id="Package\FACT_Vendas\Merge Join"
-          TopLeft="368,121" />
+          Size="156,42"
+          Id="Package\FACT_Vendas\Derived Column"
+          TopLeft="195,223" />
+        <EdgeLayout
+          Id="Package\FACT_Vendas.Paths[Sort Output1]"
+          TopLeft="316,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,-36"
+              Start="0,0"
+              End="44.5,-36">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,0"
+                    Point2="26,0"
+                    Point3="26,-4" />
+                  <mssgle:LineSegment
+                    End="26,-32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26,-32"
+                    Point2="26,-36"
+                    Point3="30,-36" />
+                  <mssgle:LineSegment
+                    End="44.5,-36" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\FACT_Vendas.Paths[Sort Output]"
           TopLeft="276.5,84">
@@ -8051,31 +7847,75 @@ FROM ResumoECommerce..Vendas</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FACT_Vendas.Paths[Sort Output1]"
-          TopLeft="316,178">
+          Id="Package\FACT_Vendas.Paths[OLE DB Source Output1]"
+          TopLeft="169,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52,-36"
+              EndConnector="53,0"
               Start="0,0"
-              End="44.5,-36">
+              End="45.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="22,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22,0"
-                    Point2="26,0"
-                    Point3="26,-4" />
+                    End="45.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_Vendas.Paths[OLE DB Source Output]"
+          TopLeft="145,288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,-44"
+              Start="0,0"
+              End="42.5,-44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="26,-32" />
+                    End="21,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="26,-32"
-                    Point2="26,-36"
-                    Point3="30,-36" />
+                    Point1="21,0"
+                    Point2="25,0"
+                    Point3="25,-4" />
                   <mssgle:LineSegment
-                    End="44.5,-36" />
+                    End="25,-40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25,-40"
+                    Point2="25,-44"
+                    Point3="29,-44" />
+                  <mssgle:LineSegment
+                    End="42.5,-44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_Vendas.Paths[Derived Column Output]"
+          TopLeft="269.5,223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-24"
+              Start="0,0"
+              End="0,-16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8088,7 +7928,7 @@ FROM ResumoECommerce..Vendas</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_Vendas\DIM_Tempo">
+    design-time-name="Package\FACT_Vendas\Vendas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8101,7 +7941,7 @@ FROM ResumoECommerce..Vendas</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_Vendas\Vendas">
+    design-time-name="Package\FACT_Vendas\DIM_Tempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
