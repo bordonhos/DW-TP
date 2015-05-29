@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{5DA20280-ED75-4468-91FA-742493C93403}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{B9457FB1-1414-47C7-A4AB-B9310A8E955D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5459,6 +5459,148 @@ FROM ResumoECommerce..Vendas</property>
               </outputs>
             </component>
             <component
+              refId="Package\FACT_Vendas\Faixa_Etaria"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Faixa_Etaria"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select	FE=	CAse 
+				when DATEDIFF(year, c.DataNasc,v.DataHoraReg)&lt;=20  then
+				'0-20'
+				when DATEDIFF(year, c.DataNasc,v.DataHoraReg)&gt;20 AND DATEDIFF(year, c.DataNasc,v.DataHoraReg)&lt;30  then
+				'20-30'
+				when DATEDIFF(year, c.DataNasc,v.DataHoraReg)&gt;30 AND DATEDIFF(year, c.DataNasc,v.DataHoraReg)&lt;40  then
+				'30-40'
+			else
+				'&gt;40'
+			end,
+		c.idCliente
+from	ResumoECommerce.dbo.Clientes c,ResumoECommerce.dbo.Vendas v
+where	c.idCliente=v.idcliente</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_Vendas\Faixa_Etaria.Connections[OleDbConnection]"
+                  connectionManagerID="{7D9E6259-52A6-4B51-A18B-6FEFCA336BF2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Origem]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].Columns[FE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].ExternalColumns[FE]"
+                      length="5"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].Columns[FE]"
+                      name="FE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].Columns[idCliente]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].ExternalColumns[idCliente]"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].Columns[idCliente]"
+                      name="idCliente"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].ExternalColumns[FE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="FE" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Output].ExternalColumns[idCliente]"
+                      dataType="guid"
+                      name="idCliente" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[FE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[FE]"
+                      name="FE" />
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[idCliente]"
+                      dataType="guid"
+                      lineageId="Package\FACT_Vendas\Faixa_Etaria.Outputs[OLE DB Source Error Output].Columns[idCliente]"
+                      name="idCliente" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\FACT_Vendas\Merge Join"
               componentClassID="{14D43A4F-D7BD-489D-829E-6DE35750CFE4}"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -6758,7 +6900,7 @@ FROM ResumoECommerce..Vendas</property>
     design-time-name="Package\DIM_Clientes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="100,42"
           Id="Package\DIM_Clientes\Sort"
@@ -6838,7 +6980,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6872,7 +7016,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6894,7 +7040,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6928,7 +7076,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6962,7 +7112,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6996,7 +7148,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7030,7 +7184,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7064,7 +7220,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7098,7 +7256,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7126,7 +7286,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7160,7 +7322,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7644,7 +7808,7 @@ FROM ResumoECommerce..Vendas</property>
     design-time-name="Package\DIM_Tempo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="115,42"
           Id="Package\DIM_Tempo\Vendas"
@@ -7688,7 +7852,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7722,7 +7888,9 @@ FROM ResumoECommerce..Vendas</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7755,9 +7923,9 @@ FROM ResumoECommerce..Vendas</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
-          Id="Package\FACT_Vendas\DIM_Tempo"
-          TopLeft="30,40" />
+          Size="109,42"
+          Id="Package\FACT_Vendas\Sort 1"
+          TopLeft="222,42" />
         <NodeLayout
           Size="132,42"
           Id="Package\FACT_Vendas\Merge Join"
@@ -7771,13 +7939,13 @@ FROM ResumoECommerce..Vendas</property>
           Id="Package\FACT_Vendas\Vendas"
           TopLeft="30,267" />
         <NodeLayout
-          Size="109,42"
-          Id="Package\FACT_Vendas\Sort 1"
-          TopLeft="222,42" />
-        <NodeLayout
           Size="156,42"
           Id="Package\FACT_Vendas\Derived Column"
           TopLeft="195,223" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\FACT_Vendas\DIM_Tempo"
+          TopLeft="30,40" />
         <EdgeLayout
           Id="Package\FACT_Vendas.Paths[Sort Output1]"
           TopLeft="316,178">
@@ -7924,9 +8092,26 @@ FROM ResumoECommerce..Vendas</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="136,42"
+          Id="Package\FACT_Vendas\Faixa_Etaria"
+          TopLeft="230,311" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_Vendas\Vendas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\FACT_Vendas\DIM_Tempo">
     <Properties>
@@ -7941,15 +8126,10 @@ FROM ResumoECommerce..Vendas</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_Vendas\Vendas">
+    design-time-name="Package\FACT_Vendas\Faixa_Etaria">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
