@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{E4B1209E-CEAD-4BDB-9F49-EB1428F20095}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{5DA20280-ED75-4468-91FA-742493C93403}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6750,7 +6750,7 @@ FROM ResumoECommerce..Vendas</property>
         <NodeLayout
           Size="146,42"
           Id="Package\FACT_Vendas"
-          TopLeft="316,214" />
+          TopLeft="293,192" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
