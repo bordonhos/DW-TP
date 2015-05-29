@@ -2,17 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Lanidor</Name>
-    <LastWriteTime>2015-05-18T19:30:24.6561263Z</LastWriteTime>
+    <LastWriteTime>2015-05-28T23:16:10.023282Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-<<<<<<< HEAD
-      <LastWriteTime>2015-05-19T00:49:10.7344338Z</LastWriteTime>
-=======
-      <LastWriteTime>2015-05-18T19:48:32.979587Z</LastWriteTime>
->>>>>>> 86d9a853338a8e9b8e9c15e8c878a22a83427235
+      <LastWriteTime>2015-05-29T13:33:48.9671323Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
