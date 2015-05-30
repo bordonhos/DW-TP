@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AS_Lanidor", "AS_Lanidor\AS_Lanidor.dwproj", "{DA0F3673-CFB7-4CFE-99F9-4F52F2928632}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA0F3673-CFB7-4CFE-99F9-4F52F2928632}.Development|Default.ActiveCfg = Development
+		{DA0F3673-CFB7-4CFE-99F9-4F52F2928632}.Development|Default.Build.0 = Development
+		{DA0F3673-CFB7-4CFE-99F9-4F52F2928632}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
