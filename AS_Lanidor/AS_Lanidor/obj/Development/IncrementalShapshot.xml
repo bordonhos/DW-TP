@@ -1,0 +1,75 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>ed77233</Database>
+    <Server>deti-sql-aulas.ua.pt</Server>
+    <ConnectionString>DataSource=deti-sql-aulas.ua.pt;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>TiuN2K34jCXJ7ZNPWReVye94dDo=01/06/2015 22:54:1930/05/2015 12:39:20</TimeStamp>
+        <ID>
+          <String>Ed77233</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>Z+3u6UvVvVLrTObMXhfhAhDHRNE=30/05/2015 13:45:3730/05/2015 12:56:44</TimeStamp>
+        <ID>
+          <String>Ed77233</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>wplNyYc6TaUUBXAhMvb/9o6fo8w=01/06/2015 22:03:2001/06/2015 21:51:03</TimeStamp>
+        <ID>
+          <String>DIM Clientes</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Pu8ys0Dgnhy16F5Ve0oI8iMXEQA=01/06/2015 22:03:2001/06/2015 21:56:57</TimeStamp>
+        <ID>
+          <String>DIM Tempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Vn5KUeYprOrFEY+dPvQsGVINFdk=01/06/2015 22:03:1901/06/2015 21:56:57</TimeStamp>
+        <ID>
+          <String>DIM Produtos</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>oQ8hIoJX5tGiHoSYm7EtnjVYrMI=01/06/2015 22:03:2001/06/2015 21:56:57FtHXhwFeHwauMuBjNSSRrdm+yZg=01/06/2015 21:56:5701/06/2015 21:56:57</TimeStamp>
+        <ID>
+          <String>Ed77233</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>4Uck/z0I7nNRbeFLz5vwSTIi75U=30/05/2015 11:13:1930/05/2015 11:13:18</TimeStamp>
+      <ID>
+        <String>ed77233</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2015-06-01T21:54:26.933333Z</LastDeployed>
+</DeploymentSnapshot>

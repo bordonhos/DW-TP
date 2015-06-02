@@ -6,6 +6,32 @@
     <Name>AS_Lanidor.database</Name>
     <FullPath>AS_Lanidor.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Ed77233.cube</Name>
+      <FullPath>Ed77233.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Ed77233.partitions</Name>
+          <FullPath>Ed77233.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>DIM Clientes.dim</Name>
+      <FullPath>DIM Clientes.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM Tempo.dim</Name>
+      <FullPath>DIM Tempo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM Produtos.dim</Name>
+      <FullPath>DIM Produtos.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>Ed77233.ds</Name>
