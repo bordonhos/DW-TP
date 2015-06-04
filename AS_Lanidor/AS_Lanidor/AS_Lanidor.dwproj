@@ -31,6 +31,10 @@
       <Name>DIM Produtos.dim</Name>
       <FullPath>DIM Produtos.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>FACT Vendas.dim</Name>
+      <FullPath>FACT Vendas.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

@@ -53,8 +53,15 @@
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Qui0yQeQwjsPNZbOaHeFuIJj9Kc=04/06/2015 22:22:5502/06/2015 23:48:38</TimeStamp>
+        <ID>
+          <String>FACT Vendas</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>oQ8hIoJX5tGiHoSYm7EtnjVYrMI=01/06/2015 22:03:2001/06/2015 21:56:57FtHXhwFeHwauMuBjNSSRrdm+yZg=01/06/2015 21:56:5701/06/2015 21:56:57</TimeStamp>
+        <TimeStamp>SMNLoM7GKFLaYZtXcQn4es9iDpY=05/06/2015 00:14:3601/06/2015 21:56:579eTKmKt3UWzpghMKCuoryusnRXk=05/06/2015 00:13:1201/06/2015 21:56:57</TimeStamp>
         <ID>
           <String>Ed77233</String>
         </ID>
@@ -71,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2015-06-01T21:54:26.933333Z</LastDeployed>
+  <LastDeployed>2015-06-04T23:14:36.966667Z</LastDeployed>
 </DeploymentSnapshot>

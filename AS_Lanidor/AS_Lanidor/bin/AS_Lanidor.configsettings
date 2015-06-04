@@ -20,6 +20,9 @@
       <Dimension>
         <ID>DIM Produtos</ID>
       </Dimension>
+      <Dimension>
+        <ID>FACT Vendas</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>

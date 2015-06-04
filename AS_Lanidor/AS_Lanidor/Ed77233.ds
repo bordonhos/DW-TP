@@ -6,9 +6,8 @@
   <ConnectionString>Provider=SQLNCLI11.1;Data Source=DETI-SQL-AULAS.ua.pt;Persist Security Info=True;Password=;User ID=;Initial Catalog=ed77233</ConnectionString>
   <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
   <ImpersonationInfo>
-    <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
-    <Account>ed77233</Account>
-    <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
+    <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
   </ImpersonationInfo>
   <Timeout>PT0S</Timeout>
 </DataSource>
