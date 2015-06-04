@@ -1,0 +1,79 @@
+-- PVP Total
+select	measures.pvp on columns 
+from	ed77233
+
+-- PVP por distrito
+select
+	(	
+		measures.pvp,
+		[dim clientes].distrito.distrito
+	)
+on columns
+from	ed77233
+
+-- Aveiro
+select
+	(	
+		measures.pvp
+	)
+on columns
+from	ed77233
+where	[dim clientes].distrito.&[Aveiro]
+
+-- PVP por distrito em 2014
+select
+	(	
+		measures.pvp,
+		[dim clientes].distrito.distrito
+	)
+on columns
+from	ed77233
+where	[dim tempo].Ano.&[2014]
+
+-- PVP por trimestre
+select 
+	(
+		measures.pvp,
+		[dim tempo].trimestre.trimestre
+	)
+on columns
+from	ed77233
+
+-- PVP por faixa etaria
+select
+	(	
+		measures.pvp,
+		[fact vendas].[Faixa etaria].[faixa etaria]
+	)
+on columns
+from	ed77233
+
+-- Nº de vendas por faixa etaria
+select
+	(	
+		measures.[fact vendas count],
+		[fact vendas].[Faixa etaria].[faixa etaria]
+	)
+on columns
+from	ed77233
+
+-- PVP por estação
+select
+	(	
+		measures.pvp,
+		[fact vendas].[estacao].[estacao]
+	)
+on columns
+from	ed77233
+
+-- Nº de vendas por estação
+select
+	(	
+		measures.[fact vendas count],
+		[fact vendas].[estacao].[estacao]
+	)
+on columns
+from	ed77233
+
+
+		
