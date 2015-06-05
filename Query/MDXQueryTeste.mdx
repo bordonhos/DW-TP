@@ -75,5 +75,61 @@ select
 on columns
 from	ed77233
 
+select
+	(
+		[measures].[PVP],
+		[dim tempo].Ano.Ano
+	)
+on columns
+from	ed77233
+
+-- Preco Final por ano
+WITH 
+   MEMBER [Measures].[PrecoFinal] AS
+   [Measures].[PVP] - [Measures].[Desconto]
+select
+	(
+		[measures].[PrecoFinal],
+		[dim tempo].Ano.Ano
+	)
+on columns
+from	ed77233
+
+WITH 
+   MEMBER [Measures].[PrecoFinal] AS
+   [Measures].[PVP] - [Measures].[Desconto]
+select
+	(
+		[measures].[PrecoFinal],	
+		[dim tempo].Ano.&[2014],
+		[dim tempo].Trimestre.&[3],
+		[dim clientes].Distrito.&[Aveiro],
+		[dim produtos].Tamanho.&[S],
+		[dim produtos].Marca.&[LA Women]
+	)
+on columns
+from	ed77233
+
+select 
+	(
+		measures.[per desc],
+		[dim produtos].Marca.Marca
+	)
+on columns
+from ed77233
+
+-- Por linha
+WITH 
+   MEMBER [Measures].[PercDesconto] AS
+   [Measures].[Per Desc] / [Measures].[FACT Vendas Count]
+select
+		 [Measures].[PercDesconto] on columns,
+		 [dim clientes].Distrito.Distrito on rows
+from ed77233
+
+		
+	
+
+
 
 		
