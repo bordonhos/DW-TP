@@ -21,7 +21,7 @@
         <ID>DIM Produtos</ID>
       </Dimension>
       <Dimension>
-        <ID>FACT Vendas</ID>
+        <ID>DD_Vendas</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

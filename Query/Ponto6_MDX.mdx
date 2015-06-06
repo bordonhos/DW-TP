@@ -1,0 +1,41 @@
+-- 1
+-- PVP por faixa etaria
+select
+	(	
+		measures.pvp,
+		[DD_Vendas].[Faixa etaria].[faixa etaria]
+	)
+on columns
+from	ed77233
+
+-- 2
+-- PVP por ano
+select
+	(
+		[measures].[PVP],
+		[dim tempo].Ano.Ano
+	)
+on columns
+from	ed77233
+
+-- 3
+-- Preço Final
+-- Em 2014
+-- No 3º Trimestre
+-- Em Aveiro
+-- Produtos de tamanho S
+-- Da marca LA Woman
+WITH 
+   MEMBER [Measures].[PrecoFinal] AS
+   [Measures].[PVP] - [Measures].[Desconto]
+select
+	(
+		[measures].[PrecoFinal],	
+		[dim tempo].Ano.&[2014],
+		[dim tempo].Trimestre.&[3],
+		[dim clientes].Distrito.&[Aveiro],
+		[dim produtos].Tamanho.&[S],
+		[dim produtos].Marca.&[LA Women]
+	)
+on columns
+from	ed77233

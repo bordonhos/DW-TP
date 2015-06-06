@@ -43,7 +43,7 @@ from	ed77233
 select
 	(	
 		measures.pvp,
-		[fact vendas].[Faixa etaria].[faixa etaria]
+		[DD_Vendas].[Faixa etaria].[faixa etaria]
 	)
 on columns
 from	ed77233
@@ -52,7 +52,7 @@ from	ed77233
 select
 	(	
 		measures.[fact vendas count],
-		[fact vendas].[Faixa etaria].[faixa etaria]
+		[DD_Vendas].[Faixa etaria].[faixa etaria]
 	)
 on columns
 from	ed77233
@@ -61,7 +61,7 @@ from	ed77233
 select
 	(	
 		measures.pvp,
-		[fact vendas].[estacao].[estacao]
+		[DD_Vendas].[estacao].[estacao]
 	)
 on columns
 from	ed77233
@@ -70,7 +70,7 @@ from	ed77233
 select
 	(	
 		measures.[fact vendas count],
-		[fact vendas].[estacao].[estacao]
+		[DD_Vendas].[estacao].[estacao]
 	)
 on columns
 from	ed77233
@@ -128,8 +128,10 @@ select
 from ed77233
 
 		
-	
-
-
-
-		
+-- MDX do KPI	
+select	{KPIValue("KPI_PercDesconto"), 
+		KPIGoal("KPI_PercDesconto"), 
+		KPIStatus("KPI_PercDesconto"), 
+		KPITrend("KPI_PercDesconto")}
+ON 0
+FRom	ed77233
