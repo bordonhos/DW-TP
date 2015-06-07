@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "RecSystem", "RecSystem\RecSystem.dwproj", "{CFF124B2-0E34-4E18-BAC3-940F72FD87C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF124B2-0E34-4E18-BAC3-940F72FD87C0}.Development|Default.ActiveCfg = Development
+		{CFF124B2-0E34-4E18-BAC3-940F72FD87C0}.Development|Default.Build.0 = Development
+		{CFF124B2-0E34-4E18-BAC3-940F72FD87C0}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Ed77233</Id>
+            <Name>Ed77233</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIh/9+p9KF0WtvVUKN0w3TgAAAAAQAAAARQBkADcANwAyADMAMwAAABBmAAAAAQAAIAAAAJchHQ9LLDSUed01myJwva+ucPTPS0X2gBpRUMl0i6exAAAAAA6AAAAAAgAAIAAAAMw+/ipucSt8+DI0P7dI2b81pmJxLtttVSYSQcHjPxDEEAAAAEx35tWmpHxc1mxuxgibkeJAAAAAQCcBmLjeN1RP4Zk7R/ZyCGEbPA77qr6iFezWX871NzkuJ+hTph9FfIKUAeYPJFZ+Pw9b+mSavsiuklX/FOAxcA==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Ed77233</Id>
+            <Name>Ed77233</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIh/9+p9KF0WtvVUKN0w3TgAAAAAQAAAARQBkADcANwAyADMAMwAAABBmAAAAAQAAIAAAAKXGvWDtjuzDpJEjO6kN+6APuGXtcr7qj8yp0n6SOxF/AAAAAA6AAAAAAgAAIAAAAKGjkJ63U3FxRUNLDfEK8G3AamJRJIdzm3Az0nl7YkKOEAAAAN+WBVVB2oH9k9vDtfdQLldAAAAAXc3egMeyFqsWB+CCpifMJG4xX3pKySqImB07IK+OQQNQjSX7Cc7KASRZSNg2kjQop0cCDzp2U7zPbqn2vZ9Brg==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>RecSystem</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

@@ -1,0 +1,169 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3e235e11-f45d-4725-b4a3-53ba9c9b9bd8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ed77233</ID>
+  <Name>Ed77233</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5171" scrolltop="-1918" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12647" y="8678" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DIM_Produtos" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3810" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000e20e0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_Produtos" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5171</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1918</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="98ed7d29-66c2-4f17-97ff-25638c63661c">
+      <ID>DIM Produtos</ID>
+      <Name>DIM Produtos</Name>
+      <DimensionID>DIM Produtos</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="692dbffe-bd3f-4e45-bd95-6e15e93a7fe5">
+          <AttributeID>Id Produto</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a282918e-9387-407a-9dbb-c636b8dd01b7">
+          <AttributeID>Classificacao</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d61e347b-d555-4d61-88e8-83525dd7034e">
+          <AttributeID>Composicao Principal</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed03be7e-4d91-46d4-9531-e0d2fc17acbf">
+          <AttributeID>Grupo Cor</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="663aa370-dde3-4d02-a699-550131cf73b1">
+      <ID>DIM Produtos</ID>
+      <Name>DIM Produtos</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="96280adf-c215-4436-a15d-40b62987ceda">
+          <ID>Grupo Cor Count</ID>
+          <Name>Grupo Cor Count</Name>
+          <AggregateFunction>None</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="452a9b06-1238-4e95-acd1-260a2b117227">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="64d70e23-4cc2-4607-97be-3ae3a18a4514">
+              <TableID>dbo_DIM_Produtos</TableID>
+              <ColumnID>GrupoCor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f7cff090-e5d0-4008-ac5b-6355ec4f1813">
+          <ID>Composicao Principal Count</ID>
+          <Name>Composicao Principal Count</Name>
+          <AggregateFunction>None</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="56b25004-5599-432c-bc92-e0f7f1c84e7f">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="68a9a9c0-d009-46a9-997a-5bf6325a6435">
+              <TableID>dbo_DIM_Produtos</TableID>
+              <ColumnID>ComposicaoPrincipal</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c656484b-4e50-430c-8a70-d82826ef193d">
+          <ID>Classificacao Count</ID>
+          <Name>Classificacao Count</Name>
+          <AggregateFunction>None</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="0649ce13-2ff6-4d2c-8acf-e7b1e5ba2eaf">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9e917f02-bb81-4332-b011-755b98a80e9f">
+              <TableID>dbo_DIM_Produtos</TableID>
+              <ColumnID>Classificacao</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="388c9fb3-201f-4eb4-9b8a-bfd69d5eb423">
+          <CubeDimensionID>DIM Produtos</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f362b235-076c-4c98-a4f3-0648442b8439">
+              <AttributeID>Id Produto</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="31586642-c27d-49e5-bb57-66c6eabefa2d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bead5710-0518-4b34-9928-7be66cc56998">
+                    <TableID>dbo_DIM_Produtos</TableID>
+                    <ColumnID>idProduto</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ed5aa39b-fda3-4284-83cc-b8e3ada50b95">
+    <DataSourceViewID>Ed77233</DataSourceViewID>
+  </Source>
+</Cube>
